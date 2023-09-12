@@ -1,5 +1,5 @@
 # Tik-Tak-Toe
 
-[View Demo]()
+[View Demo](https://tik-tak-toe-algorithm.netlify.app/)
 
 ![Web App](app.png)
