@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.06rem;
+}
+
+body {
+  background: #014e64;
+}
+
+/* ===== Auth ===== */
+.auth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth.active {
+  display: flex;
+}
+
+.auth > form {
+  max-width: 450px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.auth > form > label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.auth > form > label span {
+  font-size: 14px;
+}
+
+.auth > form > label > input {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+}
+.auth > form > label > input[type="submit"] {
+  background: #014e64;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+/* ===== Main ===== */
+.main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ====== aside ====== */
+.aside {
+  width: 400px;
+  height: 100%;
+  border-right: 2px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.aside > header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 4%;
+}
+
+.aside > header h1 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.aside > header p :where(span, i) {
+  color: #dedddd;
+  font-style: normal;
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+.aside > ol {
+  width: 100%;
+  height: calc(100% - 80px);
+  list-style: none;
+  overflow-y: auto;
+}
+
+.aside > ol > li {
+  width: 100%;
+  border-bottom: 1px solid #cccccc55;
+  padding: 3% 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.aside > ol > li:hover {
+  background: #cccccc18;
+}
+
+.aside > ol > li h2 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.aside > ol > li span {
+  color: #dedddd;
+}
+
+/* ====== section ====== */
+.section {
+  width: calc(100% - 400px);
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 600px;
+  height: 600px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.game > div {
+  width: calc(600px / 3 - 20px / 3);
+  height: calc(600px / 3 - 20px / 3);
+  background: #014e64;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game > div span {
+  font-size: 150px;
+  color: #bfdb39;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.38);
+}
